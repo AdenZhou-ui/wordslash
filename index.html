@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>词斩 WordSlash - 高效背单词</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="description" content="词斩 WordSlash：还原百词斩核心体验，通过中英匹配、图片记忆和拼写练习三种方式高效背单词，支持导入自己的词库。" />
+    <meta name="author" content="WordSlash" />
+    <meta name="theme-color" content="#F0521F" />
+
+    <!-- iOS 添加到主屏幕 -->
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="词斩" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="module" crossorigin src="./assets/index-Cb8N_7MP.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CcKaD0Rp.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // 注册 Service Worker，提供离线访问能力
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('./sw.js').catch(function (e) {
+            console.warn('SW register failed', e);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

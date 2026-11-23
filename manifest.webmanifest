@@ -1,0 +1,45 @@
+{
+  "id": "./",
+  "name": "词斩 WordSlash - 高效背单词",
+  "short_name": "词斩",
+  "description": "像百词斩一样高效背单词：中英匹配、图片记忆、拼写练习，支持导入词库、间隔复习与学习统计。",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#FFF7F1",
+  "theme_color": "#F0521F",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "categories": ["education", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "开始学习",
+      "short_name": "学习",
+      "description": "进入中英匹配学习",
+      "url": "./?quick=learn",
+      "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
